@@ -8,15 +8,14 @@ jobs:
     build:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
-            - uses: abhishek-hero/zod-msg-bus/yarn/action-setup
+            - uses: actions/checkout@v2  # Updated to v2
+            - uses: abhishek-hero/zod-msg-bus/yarn/action-setup@v2  # Added version specifier
               with:
                 version: 7
-            - uses: actions/setup-node@v3
+            - uses: actions/setup-node@v2  # Updated to v2
               with:
                 node-version: 16.x
                 cache: yarn
-
 
             - run: yarn install --frozen-lockfile
             - run: yarn run ci
