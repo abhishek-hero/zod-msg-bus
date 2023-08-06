@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2  # Updated to v2
-            - uses: abhishek-hero/zod-msg-bus/yarn/action-setup@v2  # Added version specifier
+            - uses: abhishek-hero/zod-msg-bus/yarn/action-setup  # Added version specifier
               with:
                 version: 7
             - uses: actions/setup-node@v2  # Updated to v2
